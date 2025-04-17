@@ -15,6 +15,10 @@ run/main_scene="uid://dyepd312hp8tl"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DbManager="*res://script/db_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -23,3 +27,7 @@ window/size/viewport_height=1080
 [dotnet]
 
 project/assembly_name="Fight"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
