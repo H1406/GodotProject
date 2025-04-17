@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyepd312hp8tl"]
+[gd_scene load_steps=3 format=3 uid="uid://dyepd312hp8tl"]
 
 [ext_resource type="Script" uid="uid://coy1n68f4nfsw" path="res://script/LoginPage.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://buxrn68ghmmey" path="res://images/bg.png" id="2_0wfyh"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,6 +12,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_o5qli")
 
+[node name="TextureRect" type="TextureRect" parent="LoginPage"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_0wfyh")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="LoginPage"]
 clip_contents = true
 custom_minimum_size = Vector2(300, 0)
@@ -20,9 +27,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 800.0
-offset_top = 200.0
+offset_top = 100.0
 offset_right = 1060.0
-offset_bottom = 314.0
+offset_bottom = 214.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -40,6 +47,7 @@ alignment = 1
 [node name="Password" type="LineEdit" parent="LoginPage/VBoxContainer"]
 layout_mode = 2
 placeholder_text = "password"
+alignment = 1
 
 [node name="LoginButton" type="Button" parent="LoginPage/VBoxContainer"]
 layout_mode = 2
