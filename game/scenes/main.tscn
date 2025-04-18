@@ -63,3 +63,9 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "Login
 "
+
+[node name="RegisterButton" type="Button" parent="LoginPage/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Register
+"

@@ -12,10 +12,6 @@ func login(username: String, password: String) -> bool:
 	var result
 	db.path = "res://users.db" 
 	db.open_db()
-	var user = {
-		"username":username,
-		"password":password
-	}
 	if(db == null):
 		print("failed")
 	else:
@@ -30,9 +26,8 @@ func create_table():
 	# Create table if it doesn't exist
 	db.create_table("users",data)
 
-func signup(username: String, password: String) -> bool:
+func register(username: String, password: String) -> bool:
 	db = SQLite.new()  # Initialize it
-	var result
 	db.path = "res://users.db" 
 	db.open_db()
 	var user = {
