@@ -4,17 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://dor4opb0346v4" path="res://images/aang.png" id="2_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8n57t"]
-radius = 249.25
+radius = 134.807
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-234, -132)
-scale = Vector2(2.36775, 2.15528)
+position = Vector2(-554.75, 177.812)
+scale = Vector2(1.25634, 0.990208)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-332, -116)
+position = Vector2(-620, 176)
 shape = SubResource("CircleShape2D_8n57t")
 debug_color = Color(0.548129, 0.453736, 0.871123, 0.42)

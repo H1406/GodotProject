@@ -16,6 +16,7 @@ offset_bottom = 40.0
 script = ExtResource("3_sugp2")
 
 [node name="LoginPage" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

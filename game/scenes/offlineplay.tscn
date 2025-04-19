@@ -1,22 +1,160 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbjwv31re880n"]
+[gd_scene load_steps=7 format=3 uid="uid://dbjwv31re880n"]
 
 [ext_resource type="Script" uid="uid://8w4gtqwwc28j" path="res://scenes/player.gd" id="1_k15ac"]
 [ext_resource type="PackedScene" uid="uid://bsop407e8itir" path="res://scenes/player.tscn" id="1_ugrcc"]
-[ext_resource type="PackedScene" uid="uid://bygcq7t4po0k1" path="res://player.tscn" id="3_8n57t"]
+[ext_resource type="Texture2D" uid="uid://3flkhpanohkq" path="res://images/world_tileset.png" id="3_8n57t"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v8ues"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ugrcc"]
+normal = Vector2(-0.0114935, -0.999934)
+distance = -350.333
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5si3k"]
+texture = ExtResource("3_8n57t")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_el5nf"]
+sources/0 = SubResource("TileSetAtlasSource_5si3k")
 
 [node name="Offlineplay" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ugrcc")]
-position = Vector2(657, 616)
+position = Vector2(1500, 313)
 script = ExtResource("1_k15ac")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-67, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(381, 959)
-shape = SubResource("WorldBoundaryShape2D_v8ues")
+position = Vector2(890, 327)
+shape = SubResource("WorldBoundaryShape2D_ugrcc")
 
-[node name="Player2" parent="." instance=ExtResource("3_8n57t")]
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 29, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 0, 54, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_el5nf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
