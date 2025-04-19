@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbjwv31re880n"]
+
+[ext_resource type="Script" uid="uid://8w4gtqwwc28j" path="res://scenes/player.gd" id="1_k15ac"]
+[ext_resource type="PackedScene" uid="uid://bsop407e8itir" path="res://scenes/player.tscn" id="1_ugrcc"]
+[ext_resource type="PackedScene" uid="uid://bygcq7t4po0k1" path="res://player.tscn" id="3_8n57t"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v8ues"]
+
+[node name="Offlineplay" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ugrcc")]
+position = Vector2(657, 616)
+script = ExtResource("1_k15ac")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-67, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(381, 959)
+shape = SubResource("WorldBoundaryShape2D_v8ues")
+
+[node name="Player2" parent="." instance=ExtResource("3_8n57t")]

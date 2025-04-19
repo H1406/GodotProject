@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyepd312hp8tl"]
+[gd_scene load_steps=5 format=3 uid="uid://dyepd312hp8tl"]
 
 [ext_resource type="Script" uid="uid://coy1n68f4nfsw" path="res://script/LoginPage.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://buxrn68ghmmey" path="res://images/bg.png" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://cn52kpqtaq2v8" path="res://script/db_manager.gd" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://dbjwv31re880n" path="res://scenes/offlineplay.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node2D"]
 
 [node name="DbManager" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -69,3 +71,7 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "Register
 "
+
+[node name="offlinegame" parent="." instance=ExtResource("4_jyhfs")]
+visible = false
+position = Vector2(685, 285)
